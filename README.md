@@ -5,16 +5,16 @@ Calculating pi by 1-dimensional elastic collision model simulation.
 This program is built to show that counting 1-dimensional elastic collisions can derive the value of pi.
 
 The video below is what I referred and there are all the details about what this program exactly do.
-[The most unexpected answer to a counting puzzle - 3Blue1Brown](https://youtu.be/HEfHFsfGXjs)
+![The most unexpected answer to a counting puzzle - 3Blue1Brown](https://youtu.be/HEfHFsfGXjs)
 
 ### How to Use
-[experiment_state](https://user-images.githubusercontent.com/100181857/155081360-3270ba02-75c2-4a5d-b95f-9fb8b4eca92e.png)
+![experiment_state](https://user-images.githubusercontent.com/100181857/155082583-1ecbec4a-a420-42f9-a109-e4b64cd400eb.png)
 The initial state of the program is "experiment".
 "RS" button is used for entering "Setting" state.
 "RUN/PAUSE" button is used for pausing/resuming the current experiment.
 "Collisions" displays the number of collisions occurred in the current experiment.
 
-[setting_state](https://user-images.githubusercontent.com/100181857/155081429-efdc8147-b3a9-4086-b10d-4fbb60120f68.png)
+![setting_state](https://user-images.githubusercontent.com/100181857/155082600-76c61301-0f61-4af8-ad95-b1c1438970f4.png)
 If you enter "Setting" state by clicking "RS" button, all the experiment information are deleted, and you can set new experiment information.
 Size: Set the size of a collider (unit: meter)
 Mass: Set the Mass of the collider (unit: kilogram)
