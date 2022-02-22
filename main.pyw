@@ -160,15 +160,15 @@ def render_pause_ui():
 
 def collider_update():
     global COLLISION, COLLISION_TIMER, PRED_COLLIDER, PAST_COLLIDE, collider
-    while COLLISION_TIMER < rational(1, TARGET_FRAME_RATE): #이번 프레임에 처리하지 않은 충돌이 존재하는 동안
-        if PRED_COLLIDER != None: #정상 충돌이라면
-            #충돌까지 이동
+    while COLLISION_TIMER < rational(1, TARGET_FRAME_RATE): #While there is not-processed collision in the current frame
+        if PRED_COLLIDER != None: #if it is valid collision
+            #Move to the collision
             for i in collider:
                 i.position += i.velocity * PAST_COLLIDE
-            #벽과 충돌
+            #Collision with the wall
             if PRED_COLLIDER[0] == "Wall":
                 PRED_COLLIDER[1].velocity = -PRED_COLLIDER[1].velocity
-            #물체간 충돌
+            #Collision between colliders
             else:
                 c1 = PRED_COLLIDER[0]
                 c2 = PRED_COLLIDER[1]
@@ -179,8 +179,8 @@ def collider_update():
                 c1.velocity = (v1 * (m1 - m2) + 2 * m2 * v2) / (m1 + m2)
                 c2.velocity = (v2 * (m2 - m1) + 2 * m1 * v1) / (m2 + m1)
             COLLISION += 1
-        #다음 충돌 예측
-        NCT = rational("inf") #Next Collision Time: 다음 충돌까지 남은 시간
+        #Next collision prediction
+        NCT = rational("inf") #Next Collision Time
         PRED_COLLIDER = None
         for i in collider:
             if i.velocity < 0:
@@ -195,7 +195,7 @@ def collider_update():
                     if CCT < NCT:
                         NCT = CCT
                         PRED_COLLIDER = [L, R]
-        #예측 끝
+        #End of prediction
         PAST_COLLIDE = NCT
         COLLISION_TIMER += NCT
     if COLLISION_TIMER == rational("inf"):
