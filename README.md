@@ -4,7 +4,7 @@ Calculating pi by 1-dimensional elastic collision model simulation.
 ### Introduction
 This program is built to show that counting 1-dimensional elastic collisions can derive the value of pi.  
 
-The hyperlinked video below is what I referred and there are all the details about what this program exactly do.  
+The hyperlinked video below is what I referenced and there are all the details about what this program exactly do.  
 [The most unexpected answer to a counting puzzle - 3Blue1Brown](https://youtu.be/HEfHFsfGXjs)
 
 ### How to Use
